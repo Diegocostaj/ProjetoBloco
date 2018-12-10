@@ -1,8 +1,0 @@
----
-# tasks file for roles/php
-- name: Install php extensions
-  apt: name={{ item }} state=present
-  become: yes
-  with_items:
-      - php7.2-gd
-      - php-ssh2

@@ -1,8 +1,0 @@
-- hosts: wordpress
-  remote_user: root
-  become: yes
-  roles:
-  - server
-  - php
-  - mysql
-  - wordpress

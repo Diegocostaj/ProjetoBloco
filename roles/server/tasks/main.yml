@@ -7,7 +7,6 @@
   apt: name={{ item }} state=present
   become: yes
   with_items:
-    - apache2
     - mysql-server-5.7
     - php7.2-mysql
     - mysql-server-5.7
