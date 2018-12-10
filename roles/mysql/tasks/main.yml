@@ -1,0 +1,18 @@
+---
+# tasks file for mysql
+become: yes
+  tasks:
+    - name: "Executa o container MySQL"
+      docker_container:
+        name: banco.bloco
+        image: mysql:5.6
+        env:
+          MYSQL_ROOT_PASSWORD: 1234qwe.
+    - name: "Executa o container WordPress"
+      docker_container:
+        name: sitebloco
+        image: wordpress
+        links:
+          - "banco.bloco:mysql"
+        ports:
+          - "80:80"
